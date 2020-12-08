@@ -1,0 +1,10 @@
+PREFIX taxon: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+
+# Node mappings
+(t:Taxon {name:n})
+    ?t a taxon:Taxon ;
+        rdfs:label ?n .
+
+# Edge mappings
+(c:Taxon)-[:subClassOf]->(p:Taxon)
+    ?c rdfs:subClassOf ?p .
